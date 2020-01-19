@@ -1,0 +1,10 @@
+To provide type-safety and resolve type-casting problems. This is main objective. 
+ Arrays are type safe and colectionsa are not type safe. 
+String[] s = new String[1000];
+s[0]="abc";...string array can have only string type of objects. Youa dd integer ex, you'll get error. Hence, string array can have only string type of objects. They are type safe. Student object can have only student objects. TO store, go for arrays. they are type safe. 
+Type safety: where only one type must be used. Arrays are inherernetly type safe. There is a gurantee on type of elemetns present inside array. 
+Collections are not type safe.Cant give guarentee for type of elements inside collection.  
+
+generics needed to provide typesafety for collections! So i can use arraylist completely instead of array. :)
+In case of arrays, at time of retreival its not rquired to perform typecasting as there is a gurantee for type of elements present inside array. 
+But in case of collections,we must perform typecsting as there is no guarenetee for the type of elements present inside collection.

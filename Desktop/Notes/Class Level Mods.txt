@@ -1,0 +1,36 @@
+The only applciable modifiers for top level classes are 
+public, 
+default,
+abstract,
+final ,
+strictfp. 
+
+But, for inner classes, the applicable modifiers are on top + 
+private,
+protected,
+static. Total 8!
+Top level very important.
+
+Access specifiers vs access modifiers : 
+public protected private default : specifiers
+
+static, final, abstract etc : modifiers
+
+But this in C++. In java, all are modifiers. (12 of them).
+
+1)public class:
+access from anywhere.
+
+2)default class:
+only within package - package level access.
+
+3)final modifier:
+class,methods and variable can be final.
+like child can override parent class's methods. But parent can say its method is final and child cannot override it.
+
+if parent has 10 methods, child class can have 5 on its own. extended from parent means 15 methods for child.
+But we cant extend if parent class is final. Then no inheritance for the parent class. Its the last and cant be extnded.
+Every method in final class is final by default. 
+
+4)Abstract modifier:
+abs is for class and methods.

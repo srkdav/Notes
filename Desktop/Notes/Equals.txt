@@ -1,0 +1,98 @@
+1)IF r1==r2 is true, if both are pointing to same object. Then, r1.equals(r2) is always true. If r1==r2 is true, r1.equals(r2) is always true!
+
+2)If r1==r2 is false, both obj are diff. Then r1.equals(r2) maybe true or false.
+If 2 objects are not equals by == them we cant conclude anything about .eq method. It may retun true or false. 
+That is if r1==r2 is false, then r1.eq(r2) may return true or false. We cant determine!
+ 
+3) If r1.eq(r2) is true,cant determine about r1==r2. It may return true or false. 
+
+4)If r1.eq(r2) is false, then r1==r2 is always false.
+
+Differences between == op and .equals() : 
+
+ To use ==, there should be some relation between argument types(either child to aprent or parent to child are smae type) or esle we will get compile time rror : Incomparable Types.
+
+If no relation between them, .equals() wont rise any error and will simple itll return false.
+
+== is for both objects and primitves. Reference Type only. Cant be overriden. Comparable error. 
+
+.eq is for content comparsion. Works on objets. can be overrriden and return false if types not same.  
+
+For any ref r, r==null or r.equals(null) always false.
+
+Hashing Related DS :
+
+Uses Bucket concept. objectd inserted based on HC. certain rules are there. 
+1) equivalent objects ( .eq() returns true) should be in same bucket. Hashinf follows this. 2 eq objects must be in same bucker. This has to be followed.It doesn't mean all objects in that bucker are equal.
+hashing related DS follow the following fundamental rules : 
+2 equivalent objects should be placed in same bucket. But, all objects in the same bucket need not be equal.  Like 12,22. same bucket but not same. 
+
+Contract between .equals() and HashCode() : 
+If 2 objs are equal, they are placed in same bucket so hashcode will be same. If .eq() is true, the hashcodes will be same. 
+2 eqivalent objects should have same hashcode. 
+i.e. if ( r1.eq(r2)) is true, then:
+	r1.Hashcode() = =r2. hashcode() is always true.
+ 
+If i didnt override HC () and eq(), then object class's will be considered. They follow HC copntract too. So to override equals, override HC too!
+
+Override HC to satisfy above contract i.e 2 eq objects should have same hashcode. 
+
+1)If r1.eq(r2) is false, can be in same or different buckets hence no restriction about Hash code. If 2 objects are not equal by .eq method, then there is no restriction on HashCode. Maybe equal or may not be equal. 
+
+2) If HC of 2 objects are equal, they are in same bucket. But not necessarily true that they will be equal. May return true or may return false. 
+
+3) If HS of 2 objects are not equal, the objects are placed in different bucket.They will be different! Not equal by .eq() 
+
+if HS of 2 obj are not equal, then these objects are always not equal by .equals().
+
+To satisfy the contract between equals and HC(), whenever we a re overriding .equals(), we must override HC() otherwise we wont get any errors (CE/RE) per se but it isnt a good programming practise.  
+
+In string class equals() already overridden, so if s1 = new "hi" and s2= new "hi", s1 and s2 will have same hashcode().
+In string class, .eq() is overridden for content comparision and hence HS() is also overridden. To generate HS() based on content.
+
+In string buffer, .eq() is not overridden for content comparision and hence HS() is also not overridden.
+sb1= new "hi" and sb2 = new "hi , here HC() will be different. 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
